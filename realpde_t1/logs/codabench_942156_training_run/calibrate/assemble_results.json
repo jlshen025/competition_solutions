@@ -1,0 +1,23 @@
+{
+ "zip": "release_work/submission.zip",
+ "sha256": "7f8174ae47499fb2c607f48437c0ea879803d8bdfe12e8670715d4fd0f43cfd5",
+ "files": [
+  "config.json",
+  "model0.pth",
+  "model1.pth",
+  "model2.pth",
+  "model3.pth",
+  "rpde_model.py",
+  "submission.py"
+ ],
+ "extracted_mb": 18.73,
+ "runs": [
+  "release_work/runs/rel_shipA_s250",
+  "release_work/runs/rel_shipB_s250",
+  "release_work/runs/rel_shipA_s350",
+  "release_work/runs/rel_shipB_s350"
+ ],
+ "table": "release_work/calib/newtab/results.json",
+ "vfit": "release_work/calib/vfit/results.json",
+ "base": false
+}

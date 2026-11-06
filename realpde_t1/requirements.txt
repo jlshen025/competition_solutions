@@ -1,0 +1,6 @@
+# Outside Docker (the Dockerfile builds the evaluation image instead).
+# The submitted code ran on torch 2.2.2 (evaluation image) and 2.5.1 (the ranked run);
+# this cleaned version was verified on 2.14.1.
+torch>=2.2
+numpy
+h5py   # preprocessing only

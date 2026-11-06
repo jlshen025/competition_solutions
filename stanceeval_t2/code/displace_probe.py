@@ -26,10 +26,10 @@ import numpy as np, pandas as pd
 REPO = os.environ.get("LLM_REGISTRY_ROOT", ".")  # dir holding llm_provider_registry.py + .env
 sys.path.insert(0, REPO)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import llm_provider_registry as _reg
+from aakit import llm_provider_registry as _reg
 from pathlib import Path
 _reg.load_dotenv(Path(REPO) / ".env")
-from llm_client import get_llm
+from aakit.llm_client import get_llm
 
 SYS = """You are auditing Arabic tweets for ONE narrow question. You are NOT doing stance detection.
 

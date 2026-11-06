@@ -1,0 +1,137 @@
+=== EXPERIMENT: rel_cvA_s250 ===
+=== JOB_ID: 22483050 ===
+=== NODE: g35.nibi.sharcnet ===
+=== START: 2026-09-22T15:18:41-04:00 ===
+TRAIN cvA_s250 seed=250 train_all=0 -> release_work/runs/rel_cvA_s250
+train 73 traj / 59294 windows | val 8 traj
+LEAD-WEIGHT OFF (pow=0) -- rel_l2 term is the unweighted window norm, bit-identical to every prior run
+SELECT ON: composite
+KNOBS: tshare=0 delta=1 rel_pow=1.0 noise_std=0.0 hard_pow=0.0 hard_mode=aoa lam_cov=3.0 cov_k=2.0 chan_w=1.0 (no-op) steps=60000
+params 1.16M (4.6 MB fp32)
+AUG-KRANGE ACTIVE 0.75-1.6 mode=interp: 57469 windows, std ratio 1.133 (expect ~1.122), temporal-anomaly std ratio 1.133 (expect ~1.122; a SHORTFALL is the interpolation low-pass)
+  every batch: 28 native + 4 continuous-k similarity-aug
+AUG-FLIP ACTIVE frac=0.125: 4/32 per batch | max|u - flip(u)| 0.000e+00 (expect 0) | max|v + flip(v)| 0.000e+00 (expect 0) | v mean -0.00068 -> +0.00068
+step      0 loss 568.0231 | val relL2 0.47912 (score 80.674) tke 46.1640 (score 4.152) | 1s
+step    500 loss -0.2486 | val relL2 0.11294 (score 94.655) tke 0.6526 (score 75.397) | 14s
+step   1000 loss -0.2868 | val relL2 0.09470 (score 95.479) tke 0.6357 (score 75.883) | 27s
+step   1500 loss -0.3188 | val relL2 0.08744 (score 95.811) tke 0.5863 (score 77.330) | 40s
+step   2000 loss -0.3594 | val relL2 0.08407 (score 95.966) tke 0.5775 (score 77.593) | 53s
+step   2500 loss -0.4391 | val relL2 0.08138 (score 96.090) tke 0.5463 (score 78.546) | 66s
+step   3000 loss -0.4047 | val relL2 0.07967 (score 96.169) tke 0.5456 (score 78.566) | 79s
+step   3500 loss -0.4698 | val relL2 0.07892 (score 96.204) tke 0.5362 (score 78.857) | 92s
+step   4000 loss -0.4441 | val relL2 0.07963 (score 96.171) tke 0.5226 (score 79.283) | 105s
+step   4500 loss -0.3728 | val relL2 0.07956 (score 96.174) tke 0.5366 (score 78.847) | 118s
+step   5000 loss -0.4268 | val relL2 0.07800 (score 96.246) tke 0.5158 (score 79.498) | 130s
+step   5500 loss -0.4023 | val relL2 0.07739 (score 96.275) tke 0.5214 (score 79.321) | 143s
+step   6000 loss -0.4226 | val relL2 0.07709 (score 96.289) tke 0.5241 (score 79.237) | 156s
+step   6500 loss -0.4622 | val relL2 0.07779 (score 96.256) tke 0.5100 (score 79.680) | 169s
+step   7000 loss -0.4223 | val relL2 0.07698 (score 96.294) tke 0.4955 (score 80.145) | 181s
+step   7500 loss -0.3769 | val relL2 0.07797 (score 96.248) tke 0.5057 (score 79.817) | 194s
+step   8000 loss -0.4646 | val relL2 0.07614 (score 96.333) tke 0.5007 (score 79.978) | 207s
+step   8500 loss -0.4325 | val relL2 0.07602 (score 96.338) tke 0.5084 (score 79.733) | 220s
+step   9000 loss -0.4726 | val relL2 0.07645 (score 96.318) tke 0.5230 (score 79.270) | 232s
+step   9500 loss -0.4384 | val relL2 0.07585 (score 96.346) tke 0.5225 (score 79.287) | 245s
+step  10000 loss -0.4071 | val relL2 0.07585 (score 96.346) tke 0.5019 (score 79.940) | 258s
+step  10500 loss -0.4262 | val relL2 0.07572 (score 96.352) tke 0.5044 (score 79.861) | 270s
+step  11000 loss -0.4255 | val relL2 0.07558 (score 96.359) tke 0.5075 (score 79.760) | 283s
+step  11500 loss -0.4831 | val relL2 0.07581 (score 96.348) tke 0.4978 (score 80.069) | 296s
+step  12000 loss -0.4284 | val relL2 0.07706 (score 96.290) tke 0.5018 (score 79.944) | 308s
+step  12500 loss -0.4225 | val relL2 0.07516 (score 96.378) tke 0.4980 (score 80.064) | 321s
+step  13000 loss -0.4797 | val relL2 0.07479 (score 96.395) tke 0.4972 (score 80.090) | 334s
+step  13500 loss -0.3933 | val relL2 0.07442 (score 96.412) tke 0.4973 (score 80.086) | 347s
+step  14000 loss -0.4260 | val relL2 0.07432 (score 96.417) tke 0.4996 (score 80.013) | 360s
+step  14500 loss -0.4887 | val relL2 0.07465 (score 96.402) tke 0.5034 (score 79.891) | 372s
+step  15000 loss -0.4300 | val relL2 0.07532 (score 96.371) tke 0.4861 (score 80.449) | 385s
+step  15500 loss -0.4660 | val relL2 0.07434 (score 96.416) tke 0.5034 (score 79.893) | 398s
+step  16000 loss -0.4572 | val relL2 0.07445 (score 96.411) tke 0.4988 (score 80.039) | 410s
+step  16500 loss -0.4386 | val relL2 0.07432 (score 96.417) tke 0.5040 (score 79.873) | 423s
+step  17000 loss -0.3986 | val relL2 0.07437 (score 96.415) tke 0.4983 (score 80.055) | 436s
+step  17500 loss -0.4270 | val relL2 0.07437 (score 96.415) tke 0.4917 (score 80.268) | 448s
+step  18000 loss -0.4414 | val relL2 0.07470 (score 96.400) tke 0.4895 (score 80.338) | 461s
+step  18500 loss -0.4948 | val relL2 0.07437 (score 96.415) tke 0.4865 (score 80.433) | 474s
+step  19000 loss -0.4792 | val relL2 0.07347 (score 96.457) tke 0.4970 (score 80.096) | 487s
+step  19500 loss -0.4321 | val relL2 0.07421 (score 96.422) tke 0.4979 (score 80.067) | 499s
+step  20000 loss -0.5222 | val relL2 0.07452 (score 96.408) tke 0.4985 (score 80.048) | 512s
+step  20500 loss -0.4814 | val relL2 0.07372 (score 96.445) tke 0.4945 (score 80.177) | 525s
+step  21000 loss -0.4456 | val relL2 0.07430 (score 96.418) tke 0.4894 (score 80.342) | 537s
+step  21500 loss -0.4181 | val relL2 0.07386 (score 96.438) tke 0.4994 (score 80.018) | 550s
+step  22000 loss -0.4740 | val relL2 0.07398 (score 96.433) tke 0.5006 (score 79.979) | 563s
+step  22500 loss -0.4315 | val relL2 0.07373 (score 96.444) tke 0.4905 (score 80.305) | 575s
+step  23000 loss -0.4285 | val relL2 0.07353 (score 96.454) tke 0.4903 (score 80.313) | 588s
+step  23500 loss -0.4928 | val relL2 0.07375 (score 96.444) tke 0.4970 (score 80.096) | 601s
+step  24000 loss -0.4424 | val relL2 0.07337 (score 96.461) tke 0.4954 (score 80.149) | 614s
+step  24500 loss -0.4612 | val relL2 0.07382 (score 96.440) tke 0.4897 (score 80.330) | 626s
+step  25000 loss -0.4522 | val relL2 0.07427 (score 96.420) tke 0.4919 (score 80.259) | 639s
+step  25500 loss -0.4904 | val relL2 0.07320 (score 96.469) tke 0.4959 (score 80.130) | 652s
+step  26000 loss -0.5102 | val relL2 0.07327 (score 96.466) tke 0.4932 (score 80.219) | 665s
+step  26500 loss -0.4508 | val relL2 0.07310 (score 96.474) tke 0.4941 (score 80.190) | 677s
+step  27000 loss -0.4385 | val relL2 0.07348 (score 96.456) tke 0.4834 (score 80.534) | 690s
+step  27500 loss -0.4130 | val relL2 0.07315 (score 96.471) tke 0.4996 (score 80.013) | 703s
+step  28000 loss -0.4514 | val relL2 0.07341 (score 96.460) tke 0.4904 (score 80.307) | 715s
+step  28500 loss -0.4573 | val relL2 0.07336 (score 96.462) tke 0.4883 (score 80.377) | 728s
+step  29000 loss -0.4750 | val relL2 0.07356 (score 96.452) tke 0.4883 (score 80.375) | 741s
+step  29500 loss -0.4356 | val relL2 0.07331 (score 96.464) tke 0.4944 (score 80.181) | 753s
+step  30000 loss -0.4926 | val relL2 0.07339 (score 96.461) tke 0.4872 (score 80.410) | 766s
+step  30500 loss -0.4509 | val relL2 0.07351 (score 96.455) tke 0.4874 (score 80.404) | 779s
+step  31000 loss -0.4636 | val relL2 0.07340 (score 96.460) tke 0.4905 (score 80.305) | 792s
+step  31500 loss -0.4156 | val relL2 0.07311 (score 96.473) tke 0.4926 (score 80.239) | 804s
+step  32000 loss -0.5125 | val relL2 0.07296 (score 96.481) tke 0.4889 (score 80.356) | 817s
+step  32500 loss -0.4545 | val relL2 0.07294 (score 96.482) tke 0.4937 (score 80.203) | 830s
+step  33000 loss -0.4703 | val relL2 0.07286 (score 96.485) tke 0.4930 (score 80.224) | 842s
+step  33500 loss -0.4451 | val relL2 0.07279 (score 96.488) tke 0.4885 (score 80.371) | 855s
+step  34000 loss -0.4274 | val relL2 0.07314 (score 96.472) tke 0.4850 (score 80.482) | 868s
+step  34500 loss -0.5021 | val relL2 0.07279 (score 96.488) tke 0.4858 (score 80.458) | 881s
+step  35000 loss -0.4418 | val relL2 0.07259 (score 96.497) tke 0.4922 (score 80.250) | 894s
+step  35500 loss -0.4924 | val relL2 0.07269 (score 96.493) tke 0.4887 (score 80.362) | 907s
+step  36000 loss -0.4752 | val relL2 0.07303 (score 96.477) tke 0.4831 (score 80.546) | 920s
+step  36500 loss -0.5172 | val relL2 0.07268 (score 96.493) tke 0.4986 (score 80.045) | 933s
+step  37000 loss -0.4503 | val relL2 0.07274 (score 96.491) tke 0.4883 (score 80.375) | 945s
+step  37500 loss -0.4830 | val relL2 0.07289 (score 96.484) tke 0.4911 (score 80.286) | 958s
+step  38000 loss -0.5012 | val relL2 0.07295 (score 96.481) tke 0.4854 (score 80.469) | 971s
+step  38500 loss -0.3924 | val relL2 0.07299 (score 96.479) tke 0.4927 (score 80.236) | 984s
+step  39000 loss -0.4788 | val relL2 0.07270 (score 96.493) tke 0.4912 (score 80.282) | 996s
+step  39500 loss -0.4401 | val relL2 0.07339 (score 96.460) tke 0.4846 (score 80.496) | 1009s
+step  40000 loss -0.5141 | val relL2 0.07312 (score 96.473) tke 0.4875 (score 80.402) | 1022s
+step  40500 loss -0.4692 | val relL2 0.07259 (score 96.498) tke 0.4904 (score 80.308) | 1035s
+step  41000 loss -0.4636 | val relL2 0.07298 (score 96.479) tke 0.4820 (score 80.580) | 1047s
+step  41500 loss -0.4731 | val relL2 0.07276 (score 96.490) tke 0.4838 (score 80.523) | 1060s
+step  42000 loss -0.4850 | val relL2 0.07263 (score 96.496) tke 0.4928 (score 80.230) | 1073s
+step  42500 loss -0.5025 | val relL2 0.07325 (score 96.467) tke 0.4837 (score 80.525) | 1086s
+step  43000 loss -0.4987 | val relL2 0.07310 (score 96.474) tke 0.4846 (score 80.497) | 1098s
+step  43500 loss -0.5060 | val relL2 0.07264 (score 96.495) tke 0.4892 (score 80.347) | 1111s
+step  44000 loss -0.4624 | val relL2 0.07279 (score 96.488) tke 0.4846 (score 80.494) | 1124s
+step  44500 loss -0.4697 | val relL2 0.07273 (score 96.491) tke 0.4889 (score 80.357) | 1137s
+step  45000 loss -0.4456 | val relL2 0.07278 (score 96.489) tke 0.4860 (score 80.450) | 1149s
+step  45500 loss -0.4681 | val relL2 0.07280 (score 96.488) tke 0.4875 (score 80.403) | 1162s
+step  46000 loss -0.5055 | val relL2 0.07298 (score 96.480) tke 0.4811 (score 80.610) | 1175s
+step  46500 loss -0.5023 | val relL2 0.07286 (score 96.485) tke 0.4835 (score 80.532) | 1188s
+step  47000 loss -0.4758 | val relL2 0.07260 (score 96.497) tke 0.4858 (score 80.455) | 1200s
+step  47500 loss -0.5071 | val relL2 0.07293 (score 96.482) tke 0.4812 (score 80.606) | 1213s
+step  48000 loss -0.5107 | val relL2 0.07254 (score 96.500) tke 0.4888 (score 80.359) | 1226s
+step  48500 loss -0.5265 | val relL2 0.07299 (score 96.479) tke 0.4825 (score 80.565) | 1239s
+step  49000 loss -0.4878 | val relL2 0.07277 (score 96.489) tke 0.4854 (score 80.469) | 1252s
+step  49500 loss -0.5020 | val relL2 0.07285 (score 96.486) tke 0.4819 (score 80.583) | 1264s
+step  50000 loss -0.4987 | val relL2 0.07292 (score 96.482) tke 0.4834 (score 80.535) | 1277s
+step  50500 loss -0.4604 | val relL2 0.07266 (score 96.494) tke 0.4843 (score 80.507) | 1290s
+step  51000 loss -0.4720 | val relL2 0.07278 (score 96.489) tke 0.4801 (score 80.641) | 1303s
+step  51500 loss -0.4742 | val relL2 0.07259 (score 96.498) tke 0.4851 (score 80.480) | 1315s
+step  52000 loss -0.4922 | val relL2 0.07262 (score 96.496) tke 0.4827 (score 80.558) | 1328s
+step  52500 loss -0.4967 | val relL2 0.07259 (score 96.498) tke 0.4859 (score 80.455) | 1341s
+step  53000 loss -0.4763 | val relL2 0.07283 (score 96.486) tke 0.4819 (score 80.584) | 1354s
+step  53500 loss -0.4771 | val relL2 0.07261 (score 96.497) tke 0.4843 (score 80.504) | 1366s
+step  54000 loss -0.4558 | val relL2 0.07268 (score 96.494) tke 0.4825 (score 80.563) | 1379s
+step  54500 loss -0.5116 | val relL2 0.07279 (score 96.488) tke 0.4826 (score 80.561) | 1392s
+step  55000 loss -0.5026 | val relL2 0.07263 (score 96.496) tke 0.4832 (score 80.541) | 1405s
+step  55500 loss -0.4890 | val relL2 0.07266 (score 96.494) tke 0.4840 (score 80.517) | 1417s
+step  56000 loss -0.4997 | val relL2 0.07274 (score 96.491) tke 0.4819 (score 80.583) | 1430s
+step  56500 loss -0.5025 | val relL2 0.07262 (score 96.496) tke 0.4830 (score 80.548) | 1443s
+step  57000 loss -0.5002 | val relL2 0.07260 (score 96.497) tke 0.4839 (score 80.519) | 1456s
+step  57500 loss -0.4748 | val relL2 0.07268 (score 96.494) tke 0.4832 (score 80.541) | 1468s
+step  58000 loss -0.4817 | val relL2 0.07265 (score 96.495) tke 0.4835 (score 80.532) | 1481s
+step  58500 loss -0.4699 | val relL2 0.07265 (score 96.495) tke 0.4831 (score 80.546) | 1494s
+step  59000 loss -0.5037 | val relL2 0.07266 (score 96.494) tke 0.4832 (score 80.540) | 1507s
+step  59500 loss -0.5056 | val relL2 0.07266 (score 96.494) tke 0.4832 (score 80.541) | 1519s
+step  59999 loss -0.4862 | val relL2 0.07266 (score 96.494) tke 0.4832 (score 80.540) | 1532s
+SAVED checkpoint from step 51000 (select=composite): val rel_l2 0.07278 -> rel_l2_score 96.489, val tke_score 80.641
+=== END: 2026-09-22T15:44:23-04:00 ===
+=== EXIT_CODE: 0 ===

@@ -13,7 +13,7 @@ import os, sys, json, argparse, time, re
 import numpy as np, pandas as pd, requests
 REPO = os.environ.get("LLM_REGISTRY_ROOT", ".")  # dir holding llm_provider_registry.py + .env
 sys.path.insert(0, REPO)
-import llm_provider_registry as _reg
+from aakit import llm_provider_registry as _reg
 from pathlib import Path
 _reg.load_dotenv(Path(REPO) / ".env")
 

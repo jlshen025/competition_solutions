@@ -5,8 +5,9 @@ each self-contained and released under the MIT license; the Codabench username i
 challenge below.
 
 A directory is the code archive as it was sent to that challenge's organizers, unpacked
-verbatim: its own `README.md` (method, environment, the exact commands that produced the
-submitted file, and the local validation protocol), `LICENSE`, requirements, and `code/`.
+verbatim unless its entry below says otherwise: its own `README.md` (method, environment, the
+exact commands that produced the submitted file, and the local validation protocol), `LICENSE`,
+requirements, and `code/`.
 Start from the directory's README — this page is only an index.
 
 No challenge dataset is included or redistributable here; request the data from the organizers
@@ -108,6 +109,27 @@ ensemble supplies the direction centre, except at d+14, where the foundation-mod
 with a solved arc half-width — worth 22.5 points on that column alone, taking it from last place to
 first. The fitted artifacts are not redistributed here: two of the six are derived from the
 organisers' competition data, and `seawinds/REPRODUCE.md` gives the command that regenerates each.
+
+## NeurIPS 2026 RealPDE Challenge, Track 1 (Sim2Real)
+
+Forecast 20 frames of real PIV measurements of flow past a foil, with per-element uncertainty
+bounds, scored on accuracy, turbulence statistics, interval quality and latency. Codabench user
+**junlong**.
+
+**Ninth place in the final ranking**, decided by the organizers retraining every finalist's code
+on a private set of unseen flow conditions.
+
+| directory | task | server score | rank |
+|---|---|---|---|
+| [`realpde_t1`](realpde_t1/) | Sim2Real forecast + uncertainty bounds | final **82.3055** ± 0.0061 (dev board 81.885) | **9** (dev board 10 of 182) |
+
+The entry uses no simulation data. Four small 2-D conv operators are trained on the 81 real
+trajectories, with exact Reynolds-similarity augmentation. A post-hoc width table is fitted
+to the challenge's interval reward, whose optimum is a per-element closed form rather than a
+fixed coverage level. Refitting that table alone, with predictions bit-identical, was worth
++0.78 on the hidden test. `realpde_t1/paper/` is the technical report, including the negative
+results on simulation pretraining and joint training. The directory is the submitted package
+with exploratory options removed, verified bitwise against it.
 
 ## License
 

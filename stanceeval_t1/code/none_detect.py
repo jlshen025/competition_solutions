@@ -50,7 +50,7 @@ import pandas as pd
 
 REPO = os.environ.get("LLM_REGISTRY_ROOT", ".")  # dir holding llm_provider_registry.py + .env
 sys.path.insert(0, REPO)
-import llm_provider_registry as providers  # noqa: E402
+from aakit import llm_provider_registry as providers  # noqa: E402
 from pathlib import Path  # noqa: E402
 
 providers.load_dotenv(Path(REPO) / ".env")
