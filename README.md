@@ -137,9 +137,9 @@ Answer distributions for every blank survey cell of held-out respondents in thre
 instruments (UNICEF, World Bank, UNHCR), scored by log score normalised to the crowd marginal.
 Codabench user **JLShen**, team name **junlong**.
 
-| directory | task | server score | rank |
-|---|---|---|---|
-| [`simulacrabench`](simulacrabench/) | per-cell conditional answer distributions | Test skill **0.48456** (UNICEF 0.34250 / WB 0.23630 / UNHCR 0.87488) | 5 of 10 at the 2026-11-15 board read |
+| directory | task | server score |
+|---|---|---|
+| [`simulacrabench`](simulacrabench/) | per-cell conditional answer distributions | Test skill **0.48456** (UNICEF 0.34250 / WB 0.23630 / UNHCR 0.87488) |
 
 All fitting happens at run time inside `predict()` on the visible rows: a library of MLPs,
 LightGBM, a Dirichlet backoff and two in-context tabular foundation models (TabPFN-3, TabICLv2),
