@@ -131,6 +131,22 @@ fixed coverage level. Refitting that table alone, with predictions bit-identical
 results on simulation pretraining and joint training. The directory is the submitted package
 with exploratory options removed, verified bitwise against it.
 
+## SimulacraBench 2026 (NeurIPS 2026 Competition Track)
+
+Answer distributions for every blank survey cell of held-out respondents in three unreleased
+instruments (UNICEF, World Bank, UNHCR), scored by log score normalised to the crowd marginal.
+Codabench user **JLShen**, team name **junlong**.
+
+| directory | task | server score | rank |
+|---|---|---|---|
+| [`simulacrabench`](simulacrabench/) | per-cell conditional answer distributions | Test skill **0.48456** (UNICEF 0.34250 / WB 0.23630 / UNHCR 0.87488) | 5 of 10 at the 2026-11-15 board read |
+
+All fitting happens at run time inside `predict()` on the visible rows: a library of MLPs,
+LightGBM, a Dirichlet backoff and two in-context tabular foundation models (TabPFN-3, TabICLv2),
+blended per item on out-of-fold log score. The directory is the submitted archive unpacked, minus
+the two public checkpoints; `fetch_weights.py` downloads them from their pinned commits and checks
+their sha256.
+
 ## License
 
 MIT — see `LICENSE`, and a copy in each entry directory.

@@ -1,0 +1,14 @@
+The TABPFN-3 Model is licensed by Prior Labs GmbH under the TABPFN-3 Non-Commercial License.
+Copyright © Prior Labs GmbH 2026.
+ THE SERVICES ARE PROVIDED FREE OF CHARGE: COMPANY SHALL NOT BE LIABLE FOR DAMAGES RESULTING FROM SLIGHT NEGLIGENCE. LIABILITY FOR GROSS NEGLIGENCE AND INTENTIONAL MISCONDUCT REMAINS UNAFFECTED.
+
+This archive redistributes, unmodified, tabpfn-v3-classifier-v3_default.ckpt from
+https://huggingface.co/Prior-Labs/tabpfn_3 (commit 24a16a89d245878b846555110985634aa2e656d7);
+the licence text is in LICENSE_TABPFN3. Any rights to use the TABPFN-3 Model are granted
+directly by Prior Labs GmbH to recipients under that licence. Used here for a public data
+science competition (SimulacraBench, NeurIPS 2026). Built with TabPFN.
+
+This archive also redistributes, unmodified, tabicl-classifier-v2-20260212.ckpt from
+https://huggingface.co/jingang/TabICL (commit 4dcd344ece2c00be9e831fdd35bed57b5ad83e19),
+TabICLv2 by the Soda team @ Inria, released under the BSD 3-Clause License (text in
+LICENSE_TABICL). It is loaded with the tabicl==2.2.0 package (PyPI, BSD 3-Clause).
